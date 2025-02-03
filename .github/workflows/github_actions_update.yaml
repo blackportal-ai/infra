@@ -61,4 +61,4 @@ jobs:
             $DIFF
             \`\`\`"
           PR_URL=$(gh pr create --base master --head "${{ steps.commit_push.outputs.branch_name }}" --title "Update GitHub Actions" --body "$PR_BODY" --draft=false --label "dependencies")
-          gh pr merge "$PR_URL" --merge --delete-branch --auto
+          gh pr merge "$PR_URL" --squash --delete-branch --auto
