@@ -44,9 +44,11 @@ jobs:
         id: commit_push
         run: |
           BRANCH_NAME="update-github-actions-$(date +%Y%m%d%H%M%S)"
-          git checkout -b "$BRANCH_NAME"
           git config --global user.name "singulon"
           git config --global user.email "deltaml@icloud.com"
+          git checkout -b "$BRANCH_NAME"
+          git add .
+          git commit -m "Apply changes from Update GitHub Actions"
           git push "https://x-access-token:${{ secrets.DELTA_BOT_GH_TOKEN }}@github.com/${{ github.repository }}" "$BRANCH_NAME"
           echo "branch_name=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
 
