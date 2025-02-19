@@ -19,7 +19,7 @@ jobs:
           override: true
 
       - name: Cache Cargo Dependencies
-        uses: actions/cache@v4.2.0
+        uses: actions/cache@v4.2.1
         with:
           path: |
             ~/.cargo
@@ -46,7 +46,7 @@ jobs:
           toolchain: stable
 
       - name: Cache Cargo Dependencies
-        uses: actions/cache@v4.2.0
+        uses: actions/cache@v4.2.1
         with:
           path: |
             ~/.cargo
@@ -74,7 +74,7 @@ jobs:
           toolchain: stable
 
       - name: Cache Cargo Dependencies
-        uses: actions/cache@v4.2.0
+        uses: actions/cache@v4.2.1
         with:
           path: |
             ~/.cargo
